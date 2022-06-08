@@ -39,6 +39,14 @@ public ResponseEntity<ClienteDTO> findById (@PathVariable Integer id){
 Cliente obj = service.findById (id);
 return ResponseEntity.ok().body(new ClienteDTO(obj));
 } 
+@GetMapping
+public ResponseEntity <List<ClienteDTO>> findAllClientes (){
+	List<Cliente> list = service.findAllClientes();
+	List<ClienteDTO> listDto = list.stream()
+			.map(cli -> new ClienteDTO(cli)).collect(Collectors.toList() );
+	return ResponseEntity.ok().body(listDto);
+}
+
 }
 
 
