@@ -68,6 +68,7 @@ public ResponseEntity<ClienteDTO> updateCliente(
 }
 
 
+ PR5-A
 @DeleteMapping (value = "/{id}")
 public ResponseEntity<ClienteDTO> delete( @PathVariable Integer id){
 	service.delete(id);

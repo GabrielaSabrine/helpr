@@ -59,6 +59,7 @@ public class ClienteService {
 		validaCpfEEmail(objDto);
 		oldObj = new Cliente(objDto);
 		return repository.save(oldObj);
+		
 	}
 	public void delete(Integer id) {
 		Cliente obj = findById(id);
