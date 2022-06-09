@@ -73,7 +73,6 @@ public ResponseEntity<ClienteDTO> delete( @PathVariable Integer id){
 	service.delete(id);
 	return ResponseEntity.noContent().build();
 }
-
 }
 
 
